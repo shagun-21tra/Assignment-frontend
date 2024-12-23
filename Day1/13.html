@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // Step 1: Define the budget object with initial properties
+let budget = {
+  income: 1000,
+  expenses: 700,
+};
+
+// Step 2: Add a new property 'savings' dynamically
+budget.savings = budget.income - budget.expenses;
+
+// Step 3: Update the income property
+budget.income = 1200;
+
+// Step 4: Recalculate the savings dynamically
+budget.savings = budget.income - budget.expenses;
+
+// Step 5: Print the updated budget object
+console.log(budget);
+
+    </script>
+</body>
+</html>

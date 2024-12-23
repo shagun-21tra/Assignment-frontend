@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+         // Step 1: Create an array of student objects
+let students = [
+  { name: "abc", age: 20, marks: { math: 85, science: 90, english: 88 } },
+  { name: "mno", age: 22, marks: { math: 75, science: 80, english: 70 } },
+  { name: "xyz", age: 19, marks: { math: 95, science: 98, english: 92 } }
+];
+
+// Step 2: Function to calculate the average marks for each student
+function calculateAverage(marks) {
+  let totalMarks = 0;
+  let subjectCount = 0;
+  
+  // Loop through the marks object to calculate total marks and subject count
+  for (let subject in marks) {
+    totalMarks += marks[subject];
+    subjectCount++;
+  }
+  
+  // Return the average
+  return totalMarks / subjectCount;
+}
+
+// Step 3: Add a new student object to the array
+students.push({ name: "pqr", age: 21, marks: { math: 80, science: 85, english: 78 } });
+
+// Step 4: Initialize variables to track the student with the highest average
+let highestAverage = 0;
+let topStudent = null;
+
+// Step 5: Loop through the students array to calculate averages and find the highest average
+for (let i = 0; i < students.length; i++) {
+  let student = students[i];
+  let avgMarks = calculateAverage(student.marks);
+  
+  console.log(`${student.name}'s average marks: ${avgMarks.toFixed(2)}`);
+  
+  // Update the highest average if this student's average is higher
+  if (avgMarks > highestAverage) {
+    highestAverage = avgMarks;
+    topStudent = student;
+  }
+}
+
+// Step 6: Print the student with the highest average
+console.log(`\nStudent with the highest average marks: ${topStudent.name} with an average of ${highestAverage.toFixed(2)}`);
+ 
+    </script>
+    
+</body>
+</html>
