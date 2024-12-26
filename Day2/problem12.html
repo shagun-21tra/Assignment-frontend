@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = { role: "admin", experience: 7, active: true, department: "IT" }; // Example input
+
+let access;
+
+if (person.role === "admin") {
+  if (!person.active) {
+    access = "Admin Access Revoked";
+  } else if (person.experience > 5) {
+    if (person.department === "IT") {
+      access = "Full IT Admin Access";
+    } else {
+      access = "Full General Admin Access";
+    }
+  } else {
+    access = "Limited Admin Access";
+  }
+} else if (person.role === "manager") {
+  if (!person.active) {
+    access = "Manager Access Revoked";
+  } else if (person.experience > 3) {
+    if (person.department === "Sales") {
+      access = "Full Sales Manager Access";
+    } else {
+      access = "Full Manager Access";
+    }
+  } else {
+    access = "Limited Manager Access";
+  }
+} else if (person.role === "user") {
+  if (!person.active) {
+    access = "User Access Revoked";
+  } else if (person.department === "Support") {
+    access = "Priority Support Access";
+  } else {
+    access = "User Access";
+  }
+} else {
+  access = "Invalid Role";
+}
+
+console.log(access);
+
+    </script>
+</body>
+</html>

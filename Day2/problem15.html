@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     for (let i = 1; i <= 5; i++) { // Outer loop for rows
+  let row = ""; // Initialize an empty string for each row
+  for (let j = 1; j <= i; j++) { // Inner loop for columns
+    if (j % 3 === 0) {
+      row += " "; // Add a space for every 3rd number
+    } else {
+      row += j + " "; // Add a number followed by a space
+    }
+  }
+  console.log(row); 
+}
+
+</script>
+    
+</body>
+</html>
