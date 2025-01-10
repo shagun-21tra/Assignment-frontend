@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.navbar {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.navbar .section {
+  margin-bottom: 20px;
+}
+
+.navbar .section h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+
+.navbar #section1 a {
+  color: #007bff; 
+}
+
+.navbar #section2 a {
+  color: #28a745; 
+}
+
+.navbar #section3 a {
+  color: #ffc107; /
+}
+
+
+.navbar .section > a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+.navbar a:hover {
+  color: #17a2b8; 
+  text-decoration: none;
+}
+
+.navbar a:active {
+  color: #dc3545; 
+}
+
+
+.navbar a[href^="https"] {
+  color: #6f42c1 !important; 
+}
+
+
+.navbar .nested-links a {
+  margin-left: 20px;
+  font-style: italic;
+  color: #6c757d; 
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="section" id="section1">
+          <h2>Section 1</h2>
+          <a href="https://section1.com">Link 1</a>
+          <a href="http://section1.com">Link 2</a>
+          <div class="nested-links">
+            <a href="https://nested1.com">Nested Link 1</a>
+            <a href="http://nested1.com">Nested Link 2</a>
+          </div>
+        </div>
+        <div class="section" id="section2">
+          <h2>Section 2</h2>
+          <a href="https://section2.com">Link 1</a>
+          <a href="http://section2.com">Link 2</a>
+          <div class="nested-links">
+            <a href="https://nested2.com">Nested Link 1</a>
+            <a href="http://nested2.com">Nested Link 2</a>
+          </div>
+        </div>
+        <div class="section" id="section3">
+          <h2>Section 3</h2>
+          <a href="https://section3.com">Link 1</a>
+          <a href="http://section3.com">Link 2</a>
+          <div class="nested-links">
+            <a href="https://nested3.com">Nested Link 1</a>
+            <a href="http://nested3.com">Nested Link 2</a>
+          </div>
+        </div>
+      </nav>
+      
+</body>
+</html>
