@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog Submission</title>
+</head>
+<body>
+
+  <header>
+    <h1>Submit a New Blog Post</h1>
+    <nav>
+      <a href="#" > home</a>
+      <a href="#" > About</a>
+      <a href="#" > Contact</a>
+      <a href="#" > Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="blog-form-title">
+      <h2 id="blog-form-title">Blog Submission Form</h2>
+
+      <form>
+        <article>
+          
+          <div>
+            <label for="title">Blog Title:</label>
+            <input type="text" id="title" name="title" required>
+          </div>
+
+          
+          <div>
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+              <option value="">--Select a Category--</option>
+              <option value="technology">Technology</option>
+              <option value="health">Health</option>
+              <option value="travel">Travel</option>
+              <option value="education">Education</option>
+            </select>
+          </div>
+
+         
+          <div>
+            <label for="content">Content:</label>
+            <textarea id="content" name="content" rows="6" required></textarea>
+          </div>
+
+          
+          <div>
+            <label for="author">Author Name:</label>
+            <input type="text" id="author" name="author" required>
+          </div>
+
+          
+          <fieldset>
+            <legend>Publication Status:</legend>
+            <div>
+              <input type="radio" id="draft" name="status" value="draft" required>
+              <label for="draft">Draft</label>
+            </div>
+            <div>
+              <input type="radio" id="published" name="status" value="published">
+              <label for="published">Published</label>
+            </div>
+          </fieldset>
+
+         
+          <div>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the terms and conditions</label>
+          </div>
+
+         
+          <div>
+            <button type="submit">Submit Blog</button>
+          </div>
+        </article>
+      </form>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; this is footer</p>
+  </footer>
+
+</body>
+</html>
