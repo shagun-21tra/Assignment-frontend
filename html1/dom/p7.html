@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Demo</title>
+  <style>
+    .container {
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <h1 id="main-heading">Original Heading</h1>
+
+
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  <p>Paragraph 3</p>
+
+  
+  <div class="container">
+    This is a container div.
+  </div>
+
+ 
+  <script>
+    // 1. Select the <h1> by ID and change its text
+    const heading = document.getElementById('main-heading');
+    heading.textContent = 'Welcome to the DOM World!';
+
+    // 2. Select all <p> elements and change their color to blue
+    const paragraphs = document.getElementsByTagName('p');
+    for (let i = 0; i < paragraphs.length; i++) {
+      paragraphs[i].style.color = 'blue';
+    }
+
+    // 3. Select the first <div> with class 'container' and change background color
+    const container = document.querySelector('.container');
+    container.style.backgroundColor = 'yellow';
+  </script>
+
+</body>
+</html>

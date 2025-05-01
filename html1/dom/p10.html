@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Storage Preferences</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input {
+      margin: 5px 0;
+      padding: 5px;
+    }
+    button {
+      padding: 5px 10px;
+    }
+    #greeting {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Set Your Preferences</h2>
+  
+  <label for="name">Your Name:</label><br>
+  <input type="text" id="name" placeholder="Enter your name"><br>
+  
+  <label for="bgColor">Background Color:</label><br>
+  <input type="text" id="bgColor" placeholder="e.g., lightblue or #f0f0f0"><br><br>
+  
+  <button id="saveBtn">Save Preferences</button>
+  
+  <div id="greeting"></div>
+
+  <script>
+    const nameInput = document.getElementById('name');
+    const colorInput = document.getElementById('bgColor');
+    const saveBtn = document.getElementById('saveBtn');
+    const greetingDiv = document.getElementById('greeting');
+
+    
+    window.onload = function () {
+      const savedName = localStorage.getItem('userName');
+      const savedColor = localStorage.getItem('bgColor');
+
+      if (savedName && savedColor) {
+        document.body.style.backgroundColor = savedColor;
+        greetingDiv.textContent = `Welcome, ${savedName}!`;
+      }
+    };
+
+    
+    saveBtn.addEventListener('click', () => {
+      const name = nameInput.value.trim();
+      const color = colorInput.value.trim();
+
+      if (!name) {
+        alert("Please enter your name!");
+        return;
+      }
+
+      if (!color) {
+        alert("Please enter a background color!");
+        return;
+      }
+
+      
+      localStorage.setItem('userName', name);
+      localStorage.setItem('bgColor', color);
+
+      
+      document.body.style.backgroundColor = color;
+      greetingDiv.textContent = `Welcome, ${name}!`;
+    });
+  </script>
+
+</body>
+</html>
