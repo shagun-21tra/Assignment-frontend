@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create a New Post</title>
+</head>
+<body>
+  <h2>Create a New Post</h2>
+
+  <input type="text" id="title" placeholder="Enter Title"><br><br>
+  <textarea id="body" placeholder="Enter Body"></textarea><br><br>
+  <button onclick="submitPost()">Submit</button>
+
+  <div id="result" style="margin-top: 20px;"></div>
+
+  <script>
+    function submitPost() {
+      const title = document.getElementById("title").value.trim();
+      const body = document.getElementById("body").value.trim();
+
+      // Check if both fields are filled
+      if (title === "" || body === "") {
+        alert("Both Title and Body are required!");
+        return;
+      }
+
+      // Create post data
+      const postData = {
+        title: title,
+        body: body,
+        userId: 1
+      };
+
+      // Send POST request
+      fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(postData)
+      })
+      .then(res => res.json())
+      .then(data => {
+        // Show response
+        document.getElementById("result").innerHTML = `
+          <h3>Post Created!</h3>
+          <p><b>ID:</b> ${data.id}</p>
+          <p><b>Title:</b> ${data.title}</p>
+          <p><b>Body:</b> ${data.body}</p>
+        `;
+        // Clear input fields
+        document.getElementById("title").value = "";
+        document.getElementById("body").value = "";
+      });
+    }
+  </script>
+</body>
+</html>
