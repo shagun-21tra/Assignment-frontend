@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kindergarten Template</title>
+  <!-- Add external stylesheets -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    /* Navbar */
+    .navbar {
+      background-color: #f9c74f;
+    }
+    .navbar-nav .nav-link {
+      color: #333 !important;
+      margin: 0 10px;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #555 !important;
+    }
+    /* Hero Section */
+    .hero {
+      background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    }
+    .hero p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+    .hero .btn {
+      background-color: #06d6a0;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      margin-top: 1.5rem;
+      border-radius: 50px;
+    }
+    .hero .btn:hover {
+      background-color: #05c690;
+    }
+    /* Features Section */
+    .features {
+      padding: 4rem 2rem;
+      background: #f7f7f7;
+    }
+    .feature-card {
+      text-align: center;
+      padding: 2rem;
+      background: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+    .feature-card i {
+      font-size: 3rem;
+      color: #f9c74f;
+      margin-bottom: 1rem;
+    }
+    /* Footer */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Kindergarten</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Welcome to Kindergarten</h1>
+      <p>Building a brighter future for every child.</p>
+      <button class="btn">Learn More</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="feature-card">
+            <i class="fas fa-book"></i>
+            <h4>Educational Activities</h4>
+            <p>Engaging and fun activities for kids to learn.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <i class="fas fa-users"></i>
+            <h4>Group Learning</h4>
+            <p>Encouraging teamwork and social interaction.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <i class="fas fa-heart"></i>
+            <h4>Safe Environment</h4>
+            <p>A safe and nurturing space for children to grow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Kindergarten. All rights reserved.</p>
+  </footer>
+
+  <!-- Add Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
